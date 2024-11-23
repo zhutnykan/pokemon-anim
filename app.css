@@ -1,0 +1,50 @@
+/* Reset styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Animation Container */
+.animation-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #90caf9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: backgroundColorChange 10s infinite;
+    position: relative;
+}
+
+/* Pokémon Sprite Styling */
+.pokemon {
+    position: absolute;
+    bottom: 20px; /* Adjust height for ground effect */
+    animation: movePikachu 5s linear infinite;
+}
+
+.pokemon img { 
+    width: 100px; /* Adjust size as needed */
+    animation: bounce 0.5s infinite alternate ease-in-out;
+}
+
+/* Keyframes for Animation */
+@keyframes movePikachu {
+    0% { transform: translateX(-200px); }
+    100% { transform: translateX(100vw); }
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-20px); }
+}
+
+@keyframes backgroundColorChange {
+    0% { background-color: #90caf9; }
+    25% { background-color: #ffeb3b; }
+    50% { background-color: #ff7043; }
+    75% { background-color: #81c784; }
+    100% { background-color: #90caf9; }
+}
